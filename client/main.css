@@ -1,0 +1,164 @@
+
+@font-face {
+  font-family: 'Menlo';
+  font-weight: 300;
+  src: url('./fonts/Menlo-Regular.woff') format('woff'),
+      url('./fonts/Menlo-Regular.woff2') format('woff2'),
+      url('./fonts/Menlo-Regular.ttf') format('ttf'),
+}
+
+@font-face {
+  font-family: 'Menlo';
+  font-weight: 600;
+  src: url('./fonts/Menlo-Bold.woff') format('woff'),
+      url('./fonts/Menlo-Bold.woff2') format('woff2'),
+      url('./fonts/Menlo-Bold.ttf') format('ttf'),
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-size: 300;
+  src: url('./fonts/HelveticaNeue-Light.woff') format('woff'),
+      url('./fonts/HelveticaNeueLight.woff2') format('woff2'),
+      url('./fonts/HelveticaNeue-Light.ttf') format('ttf'),
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-size: 600;
+  src: url('./fonts/HelveticaNeue-Bold.woff') format('woff'),
+      url('./fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+      url('./fonts/HelveticaNeue-Bold.ttf') format('ttf'),
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+  'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+}
+
+blockquote {
+  border-left: #FF9900 solid 7px;
+  color: #FF9900;
+  padding: 10px;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: justify;
+}
+
+.ant-layout {
+  background: none;
+}
+  
+.container {
+  position: relative;
+  min-height: 300px;
+  max-height: 800px;
+  overflow: hidden;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+.videobg {
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+  }
+  
+/* Add some content at the bottom of the video/page */
+.content {
+  height: 100%;
+  color:#f1f1f1;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0;
+}
+.const-highlight{
+	color: #4444FF;
+}
+
+.func-highlight{
+	color: #C1DD2A;
+}
+
+.string-highlight{
+	color: rgb(255, 153, 0);
+}
+
+.typewriter {
+	font-size: 1.3em;
+  margin: 0;
+}
+
+pre.typewriter {
+  font-family: 'Menlo', monospace;
+  }
+
+.typewriter:after {
+	content: "|";
+  animation: blink 500ms linear infinite alternate;
+  margin-left: 10px;
+}
+
+.Typewriter__cursor {
+  margin-left: 70px !important;
+  display: none;
+}
+
+
+
+@-webkit-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+  position: absolute;
+  color:#f1f1f1;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  }
+
+  pre.typewriter {
+	font-size: .9em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .stack {
+    display: none !important;
+  }
+}
+
+@media screen and (max-height: 420px) {
+
+  .stack {
+    display: none !important;
+  }
+
+  .bg-code-editor {
+    margin-top: 110px !important;
+    min-height: 220px !important;
+  }
+
+  pre.typewriter {
+  font-size: .8em;
+  }
+
+}
+
+@media screen and (max-height: 768px) {
+  .bg-code-editor {
+    margin-top: 130px !important;
+  }
+}
