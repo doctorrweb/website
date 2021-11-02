@@ -45,11 +45,11 @@ const Language = () => {
     return (
         <Col style={{ marginBottom: '1em' }} >
             <Tooltip placement="bottom" title={intl.formatMessage({id: 'lang-en'})}>
-                <Button onClick={() => ChangeLanguage('en')} size="small"><img src="/img/lang-en.png" width="20" /></Button>
+                <Button onClick={() => ChangeLanguage('en')} size="small"><img src="/public/img/lang-en.png" width="20" /></Button>
             </Tooltip>
             <Divider type="vertical" />
             <Tooltip placement="bottom" title={intl.formatMessage({id: 'lang-fr'})}>
-                <Button onClick={() => ChangeLanguage('fr')} size="small"><img src="/img/lang-fr.png" width="20" /></Button>
+                <Button onClick={() => ChangeLanguage('fr')} size="small"><img src="/public/img/lang-fr.png" width="20" /></Button>
             </Tooltip>
             {/* <Divider type="vertical" />
             <Tooltip placement="bottom" title={intl.formatMessage({id: 'lang-de'})}>

@@ -3,7 +3,7 @@ import { Col, Carousel, Typography } from 'antd'
 
 const { Title } = Typography
 
-const bgImgUri = 'img/home-ill.png'
+const bgImgUri = '/public/img/home-ill.png'
 
 const LastPost = () => {
     return (

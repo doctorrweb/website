@@ -73,15 +73,16 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api', appRouter)
-app.use(express.static('public'))
+// app.use(express.static('public'))
+app.use('/public', express.static(__dirname + '/public'))
 
 if (process.env.NODE_ENV === 'production') {
 
     const serverOptions = {
-        key: fs.readFileSync(process.env.SSL_KEY, 'utf8'),
-        cert: fs.readFileSync(process.env.SSL_CERT, 'utf8')
-        // key: fs.readFileSync('./ssl/privkey.pem'),
-        // cert: fs.readFileSync('./ssl/fullchain.pem')
+        // key: fs.readFileSync(process.env.SSL_KEY, 'utf8'),
+        // cert: fs.readFileSync(process.env.SSL_CERT, 'utf8')
+        key: fs.readFileSync('./ssl/privkey.pem'),
+        cert: fs.readFileSync('./ssl/fullchain.pem')
     }
     
     const server = https.createServer(serverOptions, app).listen(process.env.PORT, () => {

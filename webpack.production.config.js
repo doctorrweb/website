@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
@@ -10,7 +11,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './public/dist'),
         filename: 'main.[contenthash].js',
-        publicPath: '/dist/'
+        publicPath: './'
     },
     mode: 'production',
     module: {
@@ -70,12 +71,27 @@ module.exports = {
                         }
                     }
                 ],
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            output: 'dist/img/'
+                        }
+                    }
+                ]
             }
         ],
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'main.[contenthash].css'
+        }),
+        new webpack.ProvidePlugin({
+            process: 'process/browser',
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
@@ -91,7 +107,10 @@ module.exports = {
             util: require.resolve('util/'),
             stream: require.resolve("stream-browserify"),
             crypto: require.resolve("crypto-browserify"),
-        }
+        },
+        alias: {
+            process: "process/browser"
+        } 
     },
     stats: {
         colors: true,

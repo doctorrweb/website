@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from '@reduxjs/toolkit'
 //import { reducer as form } from 'redux-form'
 //import { routerReducer } from 'react-router-redux'
 import AuthenticationReducer from './authentication'

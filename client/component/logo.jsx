@@ -6,7 +6,7 @@ const Logo = () => {
     return (
         <Link to="/">
             <ReactSVG
-                src="img/logo-drwb.svg"
+                src="/public/img/logo-drwb.svg"
                 beforeInjection={svg => {
                     svg.classList.add('svg-logoDrwb')
                     svg.setAttribute('style', 'width: 200px')

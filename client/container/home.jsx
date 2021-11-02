@@ -3,7 +3,7 @@ import { Divider, Row, Col } from 'antd'
 import Intro from '../component/intro'
 import Technos from '../component/technos'
 
-const bgImgUri = 'img/background-code.png'
+const bgImgUri = '/public/img/background-code.png'
 
 const Home = () => {
     return (

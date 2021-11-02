@@ -12,7 +12,7 @@ import reducers from './reducer'
 import { setAuthentication, setCurrentUser } from './action/index'
 
 const store = configureStore({
-    reducers
+    reducer: reducers
 })
 
 const token = localStorage.getItem('token')

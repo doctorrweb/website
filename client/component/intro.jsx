@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'antd'
 import IntroMessage from './introMessage'
 
-const bgCodeEditor = 'img/code-editor-bg.png'
+const bgCodeEditor = '/public/img/code-editor-bg.png'
 
 const Intro = () => {
     return (

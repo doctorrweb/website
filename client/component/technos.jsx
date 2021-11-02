@@ -22,7 +22,7 @@ const Technos = () => {
                 xs={{ span: 1 }}
             >
                 <img 
-                    src={`img/${logo}.svg`} 
+                    src={`/public/img/${logo}.svg`} 
                     height={logo === 'express' ? 22 : 30} 
                     style={{ paddingRight: 50 }} 
                 />

@@ -4,7 +4,7 @@ import React from 'react'
 
 
 const VideoBg = () => {
-    const videoSource = 'video/videobg_code.mp4'
+    const videoSource = '/public/video/videobg_code.mp4'
 
     return (
         <video autoPlay="autoplay" loop="loop" muted className='videobg'>

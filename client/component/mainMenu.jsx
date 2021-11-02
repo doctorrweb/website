@@ -8,7 +8,7 @@ import Logo from './logo'
 import MenuContent from './menuContent'
 import CustomFooter from '../container/customFooter'
 
-const bgImgUri = 'img/video-menu-bg.gif'
+const bgImgUri = '/public/img/video-menu-bg.gif'
 const { Title } = Typography
 
 const MainMenu = () => {
